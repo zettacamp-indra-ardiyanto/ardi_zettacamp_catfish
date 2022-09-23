@@ -6,36 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <style>
-        div .first{
-        border:  solid black;
+        /* div {
+        /* border:  solid black; */
         /* padding:10%; */
+        
+
+        /* .container{
+            background-color: rgb(20, 218, 79);
+            align-content: space-between;
+            height: 500px;
+        } */
+        .flex-container{
+            border:solid black;
+            flex-wrap: wrap;
+            display: flex;
+            align-content: space-around;
+            overflow: scroll;
+            height: 300px;
+            /* background-color: rgb(20, 125, 218); */
+            margin-top: 50px;
+
+        }
+        .flex-container>div{
+            /* background-color: #e22121; */
+            margin:15px;
+            padding: 15px;
+            font-size: 18px;
         }
     </style></head>
 <body>
-    <div id=" first">
-        <h1><center>My Description</center></h1>
-        He is fresh graduate from University of Technology Yogyakarta. He like learning something new and easy to adaptation new technology
-        He choose to join ZettaCamp because he want to learn more about programming world especially in work environment or work culture and he want develop my skill and develop inovation with Zettacamp
-        His skill include :  and Python,PHP, C++.
+
+<table id="1" style="width: 100%;">
+    <tr>
+        <th><a href="Dashboard.html">Home</a></th>
+        <th><a href="navbar/Contact.html">Contact</a></th>
+        <th><a href="navbar/About.html">About</a></th>
+    </tr>
+
+</table>
+    <div ></div>
+        <div id ="judul" class = containter style="border: solid rgb(12, 8, 8);margin-top: 25px; font-size: large; ">
+            <center><h1>My Description</h1></center>
+            I am a fresh graduate from University of Technology Yogyakarta. He like learning something new and easy to adaptation new technology
+            He choose to join ZettaCamp because he want to learn more about programming world especially in work environment or work culture and he 
+            want develop my skill and develop inovation with Zettacamp
+        </br>
+            
+        </div>
     </div>
 
-    <div class="row">
-        <div class="column" style=" border: solid black;">
+    <div class="flex-container">
+        <div  style=" border: solid ;">
             <h2>My Soft Skills :</h2>
             <p>Problem solving, team work,and Creative</p>
             </br>
         </div>
-        <div class="column" style=" border: solid black;">
+        <div  style=" border: solid black;">
             <h2>My Hard Skills :</h2>
             <p>Python,PHP, C++, and Java</p>
         </div>
-    </div>
 
-        <div class="row" style=" border: solid black; ">
-                <h2>My Project</h2>
-                <p>Creating an HTML Documents for your profile. Put your identity, description of yourselves, hobby, link to social media, and more</p>
-                <br><a href="https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish.git">https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish.git</a></br>
+        <div  style=" border: solid black;">       
+            <h2>My Project :</h2>
+                <p>Creating an HTML Documents for your profile. 
+                </br>Put your identity, description of yourselves,hobby, link to social media, and more.</p>
+                <a  href="https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish.git">https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish.git</a>
         </div>
+    </div>
     
 
     
