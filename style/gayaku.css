@@ -1,0 +1,81 @@
+*{
+    /* SUPAYA margin & padding hilang, agar punya kendali penuh terhadap style yg ingin dibuat */
+    margin:0;
+    padding:0;
+
+}
+ 
+body{
+    font-family: 'Montserrat',sans-serif;
+    overflow: hidden;/*untuk menyembunyikan shape yang geser ke kanan pada shape ul mobile*/
+    
+}
+
+/*navbar*/
+nav{
+  
+    display:flex;  /* diberi flex supaya menu navnya(ul) ada disamping logo/judul  */
+    background-color: rgb(161, 236, 47);
+    /* space betwen untuk memberi jarak ditengah-tengahnya */
+    justify-content :space-around; /*untuk memberi jarak setiap sisinya   
+    /* padding: 20px 0; untuk memberi jarak atas bawah(20px) kiri kanan(0) pada navbar */
+    /* untuk mengatur posisi objek navbar */
+    height: 60px;
+    /* color: black; */
+    /*berasal dari flexbox */
+    align-items: center;/*memberikan letak objek nav ke tengah*/
+    
+}
+
+nav.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size:large
+} 
+nav ul{
+    
+    display:flex;/* diberi flex supaya menu navnya jejer horizontal  */
+    list-style:none;/*untuk menghilangkan tanda list pada menu ul or objek ul*/
+    width:40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    text-decoration: none;/*untuk menghilangkan underscore pada huruf di li*/
+    font-size :1em;/*untuk mengecilkan ukuran huruf */
+}
+
+/* responsif breakpoint */
+
+
+/* ukuran li tablet */
+@media screen and (max-width:760px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* ukuran li mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    /*untuk memindahkan ul ke mobile*/
+    nav ul{
+        /* display: none */
+        position: absolute;
+        right: 0;
+        top: 0;/*untuk memberikan tinggi pada shape menu ul*/
+        width: 80%;/*untuk memperlebar shape*/
+        height: 100vh;/*untuk memberikan ukuran pada shape. vh=viewport height/ tinggi dari layar kita lihat */
+        justify-content: space-evenly;/*untuk memberikan space atas bawah sama*/
+        flex-direction: column;/*untuk memberikan posisi agar huruf & membuat shape di ul jejer kebawah/vertical*/
+        align-items: center;/*untuk memberikan tulisan di ul menjadi ketengah*/
+        background-color: rgb(187, 250, 93);
+        z-index: -1;/*untuk menyembunyikan shape bagian atas*/
+        transform: translateX(100%);/*untuk menyembunyikan shape bergeser ke kanan*/
+        transition: all 1s; /*waktu durasi animasi*/
+
+        opacity: 0;
+
+    }
+
+    }
