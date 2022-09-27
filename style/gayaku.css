@@ -4,13 +4,16 @@
     padding:0;
 
 }
+
  
 body{
     font-family: 'Montserrat',sans-serif;
-    overflow: hidden;/*untuk menyembunyikan shape yang geser ke kanan pada shape ul mobile*/
+    overflow: scroll;/*untuk menyembunyikan shape yang geser ke kanan pada shape ul mobile*/
     
 }
-
+/* div img.profil{
+    border-radius:50%;
+} */
 /*navbar*/
 nav{
   
