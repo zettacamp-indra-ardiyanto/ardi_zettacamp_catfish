@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Edit Profile</title>
+    <link rel="stylesheet" href="../style/gayaku.css"/>
+    <style>
+        #jdl{
+            margin-top: 30px;
+        }
+        h3{
+            margin-left: 10px;
+        }
+        form label{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo" >
+            <h4><a style="text-decoration: none;" href="html_shopping.html"> Curiculum Vitae</a></h4> 
+        </div> 
+        <ul >
+            <li><a href= "../index.html">Home</a></li>
+            <li><a href= "../navbar/kontak.html">Contact</a></li>
+            <li><a href= "../navbar/tentang.html">About</a></li>
+            <li><a href= "../navbar/editForm.html">Edit</a></li>
+        </ul>
+    </nav>  
+
+  
+        <center><p><h1 id="jdl">Edit Profile</h1></p></center>
+            
+        <div class="row" >
+            <div class="position-relative" style="border: solid black;">
+                <h2 >File Uploud</2>
+            </div>
+            <div class="card-body" >
+                <br/>
+                <h3 >-Audio File-</h3>
+                <audio style="margin-left: 10px;width: 44%; " src="../assets/myMusic.mp3" controls loop >
+                    This is your audio
+                </audio>
+                <br/>
+                <br/>
+                <h3>-Video File-</h3>
+                <video src="../assets/learning.mp4" controls 
+                style="margin-left: 10px;width: 44%>
+                        This is your Video
+                </video>
+                <br/>
+                <br/>
+                <h3>-Video Youtube File-</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sRxrwjOtIag" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen ></iframe>
+                <!-- <video  controls height="200" width="300">
+                    <source src="../assets/learning.mp4" type="video/mp4" >
+                    This your video
+                </video> -->
+            </div>
+
+            <div class="position-relative" style="border: solid black;margin-top: 30px;">
+                <h2>Form Data</2>
+            </div>
+            <div class="card-body" style="border: solid rgb(0, 0, 0);">
+            
+                <form style="margin-left: 10px;">
+                    <label for="fname">First Name</label>
+                    <br/>
+                    <input type="text" id="fname" name="fname"
+                    placeholder="John "cols="50">
+                    <br>
+                    <label for="lname">Last Name</label>
+                    <br>
+                    <input type="text" id="lname" name="lname"
+                    placeholder="Jamet ">
+                    <br>
+                    <label for="umr">Age</label>
+                    <br>
+                    <input type="number" id="umr" name="umr"
+                    placeholder="18  ">
+                    <br>
+                    <label for="almt">Address</label>
+                    <br>
+                    <textarea id="almt" name="almt" rows="4" cols="50"> Jendral Sudirmanto.ST,Sleman Regency,Yogyakarta
+                    </textarea>
+                    <br>
+                    <p>Genders:</p>
+                    <input type="radio" id="age1" name="age" value="30">
+                    <label for="age1">Male</label><br>
+                    <input type="radio" id="age2" name="age" value="60">
+                    <label for="age2">Female</label><br>  
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" id="email" name="email"
+                    placeholder="John@gmail.com ">
+                    <br>
+                    <label for="tlp">Phone Number</label>
+                    <br>
+                    <input type="number" id="tlp" name="tlp"
+                    placeholder="+1324343432423 ">
+                    <br>
+                </form>
+                <br/>
+                <p>If you have some problem while you fill your form, you can click this <a href="https://www.google.com/indra.ardiyanto@zettacamp.pro">link</a></p>
+            </div>
+        </div>
+            
+        </div>
+
+          
+   
+
+</body>
+</html>
