@@ -38,8 +38,18 @@
         #age2{
             width: 2%;
         } 
+    
+         #v1{
+            width: 2%;
+        }
+        #v2{
+            width: 2%;
+        } 
+        #v3{
+            width: 2%;
+        } 
         .container{
-            margin-left: 15%;
+            margin-left: 25%;
         }
         button{
             height: 30%;
@@ -58,58 +68,47 @@
             <li><a href= "../navbar/kontak.html">Contact</a></li>
             <li><a href= "../navbar/tentang.html">About</a></li>
             <li><a href= "../navbar/editForm.html">Edit</a></li>
+            <li><a href= "../navbar/dataTable.html">Data Table</a></li>
         </ul>
     </nav>  
 
   
-        <center><p><h1 id="jdl">Edit Profile</h1></p></center>
+        <center><p><h1 id="jdl">Sign Up</h1></p></center>
             
         <div class="container"  >
-            <div class="position-relative" >
-                <h2 >File Uploud</2>
-            </div>
-            <div class="card-body" style="margin-bottom: 40px;;" >
-                <br/>
-                <h3 >-Audio File-</h3>
-                <audio style="margin-left: 10px;width: 44%; " src="../assets/myMusic.mp3" controls loop >
-                    This is your audio
-                </audio>
-                <br/>
-                <br/>
-                <h3>-Video File-</h3>
-                <video src="../assets/learning.mp4" controls 
-                style="margin-left: 10px;width: 44%;">
-                        This is your Video
-                </video>
-                <br/>
-                <br/>
-                <h3>-Video Youtube File-</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sRxrwjOtIag" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen style="margin-left: 1%"></iframe> </iframe>
-                <!-- <video  controls height="200" width="300">
-                    <source src="../assets/learning.mp4" type="video/mp4" >
-                    This your video
-                </video> -->
-            </div>
+            
 
-            <div class="position-relative" >
+            <!-- <div class="position-relative" >
                 <h2>Form Data</2>
-            </div>
+            </div> -->
             <div class="card-body" >
             
-                <form id ="unggah" style="margin-left: 10px;margin-top: 10px;">
+                <form  style="margin-left: 10px;margin-top: 10px;" >
                     <label for="fname">First Name</label>
                     <br/>
                    
                     <input type="text" id="fname" name="fname"
-                    placeholder="John "width="100">
+                    placeholder="Bang "width="100">
                     <br>
                     <label for="lname">Last Name</label>
                     <br>
                     <input type="text" id="lname" name="lname"
                     placeholder="Jamet ">
+                    <br>
+                    <label for="lgmbr">Gambar</label>
+                    <br>
+                    
+                        <!-- <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-round-icon.png" width="30"height="30" style="margin-top: 2%;"> -->
+                        <input  type="file" class="custom-file-input" id="image" name="image">
+                            <!-- <label class="custombfile-label" for="image"></label> -->
+                  
+                    <!-- <input type="text" id="lname" name="lname"
+                    placeholder="Jamet "> -->
+                    <br>
+                    <label for="lpas">Password</label>
+                    <br>
+                    <input type="password" id="lpas" name="lpas"
+                    placeholder="12456Hal0bosq ">
                     <br>
                     <label for="umr">Age</label>
                     <br>
@@ -126,21 +125,92 @@
                     <label for="age1">Male</label><br>
                     <input  type="radio" id="age2" name="age" value="60">
                     <label for="age2">Female</label><br>  
-                    <label for="email">Email</label>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="mailInput" name="mail"
+                    placeholder="bang.jamet@gmail.com  ">
                     <br>
-                    <input type="email" id="email" name="email"
-                    placeholder="John@gmail.com ">
+                    <p>Hobby:</p>
+                     <input type="checkbox" id="v1" name="v1" value="Bike">
+                    <label for="v1"> Jogging</label><br>
+                    <input type="checkbox" id="v2" name="v2" value="Car">
+                    <label for="v2"> Reading</label><br>
+                    <input type="checkbox" id="v3" name="v3" value="Boat">
+                    <label for="v3"> Music</label><br><br>
+                    
                     <br>
                     <label for="tlp">Phone Number</label>
                     <br>
-                    <input type="number" id="tlp" name="tlp"
+                    <input type="text" id="tlpOk" name="tlp"
                     placeholder="+1324343432423 ">
                     <br>
-
+                    
                 </form>
-                <button  type="submit" form="unggah" value="Submit">Submit</button>
+                <button onclick="jwbn()">Submit</button>
+                <!-- save it -->
+                <script>
+                    function jwbn() {
+                        var strText = document.getElementById("fname").value;
+                        var strText1 = document.getElementById("lname").value;
+                        var result = strText +" "+strText1;
+                        document.getElementById('rst1').textContent = result;
+                        
+                        var strText2 = document.getElementById("umr").value;
+                        document.getElementById('rst2').textContent = strText2;
+
+                        var strText3 = document.getElementById("almt").value;
+                        document.getElementById('rst3').textContent = strText3;
+
+                        var strText7 = document.getElementById("mailInput").value;
+                        console.log(strText7);
+                        document.getElementById('rst7').textContent = strText7;
+
+                        var strText8 = document.getElementById("tlpOk").value;
+                        console.log(strText8);
+                        document.getElementById('rst8').textContent = strText8;
+
+                        // if(id=="age1")
+                        // {
+                        //     var strText4 = document.getElementById("age1").value;  
+                        //     var rs1 = strText4;
+
+                        // }else if(id=="age2")
+                        // {
+                        //     var strText4 = document.getElementById("age2").value;
+                        //     var rs1 = strText4;
+                        // }
+
+                        // document.getElementById('rst4').textContent = rs1;
+                    // var strText6 = document.getElementById("fname").value;
+
+
+                    
+                   
+                    
+                    
+                    // document.getElementById('rst1').textContent = result;
+                    
+                    }
+                    </script>
+                <!-- <button  type="submit" form="unggah" value="Submit">Submit</button> -->
                 <br/>
                 <p style="margin-left: 10px;"> If you have some problem while you fill your form, you can click this <a href="https://www.google.com/indra.ardiyanto@zettacamp.pro">link</a></p>
+            </div>
+            
+            <div  id="sumary"style="margin-top: 5%; " >
+                <h2> My Summary </h2>
+                <br/>
+                <section>
+                    My name is <strong><span id="rst1"> </span></strong>
+                    ,I am <strong><span id="rst2"> </span></strong>  years old, and I am <strong>male</strong>, I like <strong>Jogging</strong>. 
+                    I live at <strong><span id="rst3"> </span></strong>. <br>
+                    
+                 </section>
+                    <br/> 
+                <section>
+                    I am fast learning and agile  
+                    If you interest to me you can call me <strong><span id="rst8"> </span></strong> and my email is <strong><span id="rst7"> </span></strong>. <br/>
+                    Thank you
+                </section>
             </div>
         </div>
             
