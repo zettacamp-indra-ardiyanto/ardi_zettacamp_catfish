@@ -1,0 +1,176 @@
+*{
+    /* SUPAYA margin & padding hilang, agar punya kendali penuh terhadap style yg ingin dibuat */
+    margin:0;
+    padding:0;
+
+
+}
+
+ .row {
+
+    border:solid rgb(14, 14, 9);
+     margin-left: 30px;
+     margin-right: 30px;
+ }
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    overflow: scroll;/*untuk menyembunyikan shape yang geser ke kanan pada shape ul mobile*/
+    
+}
+/* div img.profil{
+    border-radius:50%;
+} */
+/*navbar*/
+.container-fluid{
+    width: 98%;
+    padding-right:0.75rem;
+    padding-left: 0.75;
+    margin-right: auto;
+    margin-left: auto;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    }
+.albm {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    width: 500px;
+    height: 400px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        /* border:solid black */
+        }
+
+        .content {
+            /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+            /* border:solid black; */
+            margin-top:15px;
+            padding-bottom: 20px;
+            text-align: left;
+            /* margin-bottom: 78px; */
+               border-top: solid black;
+                }
+  
+
+    .title {
+    color: rgb(5, 0, 0);
+    font-size: 18px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 3%;
+    }
+.button{
+    border:none;
+    background-color: rgb(253, 253, 253);
+    padding: 10px;
+    color: rgb(1, 9, 15);
+    font-size: 30px;
+    font-family: arial;
+}
+    .msic {
+        color: rgb(5, 0, 0);
+        font-size: 16px;
+        text-align: left;
+        margin-top: 8px;
+        margin-left: 1%;
+        }
+
+
+    button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    }
+
+    a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    }
+
+    button:hover, a:hover {
+    opacity: 0.7;
+    }
+            table,th,td{
+                border: 1px  ;
+            }
+nav{
+  
+    display:flex;  /* diberi flex supaya menu navnya(ul) ada disamping logo/judul  */
+    background-color: rgb(161, 236, 47);
+    /* space betwen untuk memberi jarak ditengah-tengahnya */
+    justify-content :space-around; /*untuk memberi jarak setiap sisinya   
+    /* padding: 20px 0; untuk memberi jarak atas bawah(20px) kiri kanan(0) pada navbar */
+    /* untuk mengatur posisi objek navbar */
+    height: 60px;
+    /* color: black; */
+    /*berasal dari flexbox */
+    align-items: center;/*memberikan letak objek nav ke tengah*/
+    
+}
+
+nav.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size:large
+} 
+nav ul{
+    
+    display:flex;/* diberi flex supaya menu navnya jejer horizontal  */
+    list-style:none;
+    /*untuk menghilangkan tanda list pada menu ul or objek ul*/
+    width:40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    text-decoration: none;/*untuk menghilangkan underscore pada huruf di li*/
+    font-size :1em;/*untuk mengecilkan ukuran huruf */
+}
+
+/* responsif breakpoint */
+
+
+/* ukuran li tablet */
+@media screen and (max-width:760px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* ukuran li mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    /*untuk memindahkan ul ke mobile*/
+    nav ul{
+        /* display: none */
+        position: absolute;
+        right: 0;
+        top: 0;/*untuk memberikan tinggi pada shape menu ul*/
+        width: 80%;/*untuk memperlebar shape*/
+        height: 100vh;/*untuk memberikan ukuran pada shape. vh=viewport height/ tinggi dari layar kita lihat */
+        justify-content: space-evenly;/*untuk memberikan space atas bawah sama*/
+        flex-direction: column;/*untuk memberikan posisi agar huruf & membuat shape di ul jejer kebawah/vertical*/
+        align-items: center;/*untuk memberikan tulisan di ul menjadi ketengah*/
+        background-color: rgb(187, 250, 93);
+        z-index: -1;/*untuk menyembunyikan shape bagian atas*/
+        transform: translateX(100%);/*untuk menyembunyikan shape bergeser ke kanan*/
+        transition: all 1s; /*waktu durasi animasi*/
+
+        opacity: 0;
+
+    }
+
+    }
