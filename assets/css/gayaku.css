@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    overflow: scroll;
+}
+
+nav{
+  
+    display:flex;  /* diberi flex supaya menu navnya(ul) ada disamping logo/judul  */
+    background-color: rgb(161, 236, 47);
+    /* space betwen untuk memberi jarak ditengah-tengahnya */
+    justify-content :space-around; /*untuk memberi jarak setiap sisinya   
+    /* padding: 20px 0; untuk memberi jarak atas bawah(20px) kiri kanan(0) pada navbar */
+    /* untuk mengatur posisi objek navbar */
+    height: 60px;
+    /* color: black; */
+    /*berasal dari flexbox */
+    align-items: center;/*memberikan letak objek nav ke tengah*/
+    
+}
+
+nav.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size:large
+} 
+nav ul{
+    
+    display:flex;/* diberi flex supaya menu navnya jejer horizontal  */
+    list-style:none;/*untuk menghilangkan tanda list pada menu ul or objek ul*/
+    width:40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    text-decoration: none;/*untuk menghilangkan underscore pada huruf di li*/
+    font-size :1em;/*untuk mengecilkan ukuran huruf */
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 580px;
+    margin-top: 60px; 
+    margin-left: 30%;
+    padding-bottom: 5%;
+    font-family: arial;
+    
+}
+#gmbrF{
+    width:50%;
+    margin-top: 20px; 
+    border-radius: 200px;
+    border: solid black;
+    margin-left: 24%
+    
+}
+#titleP{
+    margin-left: 30%;
+    margin-top: 1.8%;
+    font-size:xx-large;
+    
+}
+#subP{
+    margin-left: 35%;
+    font-size: large;
+    margin-top: 1%;
+}
+#contentP{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+ #lineP{
+    border-top :solid black;
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+} 
+
+table {
+
+    /* border-collapse: collapse; */
+    width: 95%;
+    margin-left: 4%;
+    margin-top: 1%;
+  }
+
+/* th,td{
+    border:solid black;
+} */
+  
+#gmbr{
+    width: 37px;
+    margin-left: 9%;
+    
+}  
+
+#gmbr2{
+    width:35px ;
+    margin-left: 9%;
+} 
+
+#sp1{
+    color: rgb(255, 0, 0);
+    font-size: x-large;
+}
+
+#sp2{
+    color: rgb(255, 0, 0);
+   
+}
+
+#sp5{
+    color: red;
+}
+#sp3{
+    color: blue;
+    font-size: x-large;
+}
+#sp4{
+    color: blue;
+    
+}
+
+
+  
+  
+
+
