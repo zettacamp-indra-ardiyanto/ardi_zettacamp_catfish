@@ -13,7 +13,7 @@
   background-color: rgb(0, 255, 0);
   position: sticky;
   top:0; 
-  text-align: center;
+  text-align: left;
 }
 #judula{
   margin-top: 25px; 
@@ -93,18 +93,153 @@ nav ul li a{
   font-size :1em;/*untuk mengecilkan ukuran huruf */
 }
 
+.conH{
+    position: relative;
+    display: flex; 
+    /* border: solid red; */
+   /* margin-bottom: -50%; */
+}
+.vidH{
+ 
+    border: solid black;
+    /* width: 35%;
+    height: 50%; */
+} 
+video{
+    width: 40%;
+    /* height: 100%; */
+    margin-bottom: -13%;
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+ .kontH{
+ 
+     /* border: solid rgba(24, 84, 214, 0.582); */
+      width: 35%; 
+     margin-left: 2%;
+     margin-top: 10%;
+    
+} 
+
+.prodH{
+margin-top: 15%;
+margin-left: 10%;
+
+}
+.jdS1{
+    font-size:xx-large ;
+    color: rgb(0, 0, 0);
+
+}
+.titCard{
+    font-size:xx-large ;
+    text-align: center;
+}
+.jdS2{
+    font-size:100% ;
+    margin-left:68%;
+    margin-top: 1%;
+}
+
+.addTit{
+    margin-left: 10rem;
+    /* border:1px solid black; */
+    display: flex;
+    margin-top: 2rem;
+}
+.formAdd{
+    margin-left: 10rem;
+    /* border:1px solid black; */
+    display: flex;
+    margin-top: 2rem;
+}
+
+.kontForm{
+    width:40%;
+    height: fit-content;
+}
+.kontForm1{
+    width: 50%;
+    margin-left: 1rem;
+}
+
+.borDash{
+    border: dashed rgb(21, 226, 2);
+    width:99%;
+    height: 98%  ;
+}
+
+.borDash>div{
+    margin-top:4%;
+    margin-left: 30%;
+}
+
+.cardId{
+    /* border: solid black; */
+    margin-top: 4%;
+    margin-left: 15%;
+    margin-right:3%;
+}
+
+
+
+
+.inAdd{
+    width:100%
+}
+.borH{
+    /* border: solid black; */
+    display: flex;
+    /* border: solid red; */
+}
+
+.titProd{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gmbrProd{
+     border:  1px solid rgb(136, 123, 123);  
+    margin: 1rem 1rem 1rem 1rem;
+    text-align: center;
+     /* box-shadow: 0 4px 90px 0 rgba(0, 0, 0, 0.2);  */
+}
+
+.gmbrProd>div{
+    text-align: center;
+}
+
+.gmbrI+div{
+    font-size: x-large;
+    font-weight: bold;
+}
+.ketG{
+    font-size: large;
+    color: green;
+    /* text-decoration: underline; */
+    margin-top: 15%;
+    margin-left: 2%;
+}
+
+.jShop{
+    margin-top: 25%;
+}
 .flexhd{
   display: flex;
 }
 
 .judul{
   font-size: 150%;
+  margin-left: 2%;
 }
 
  .judul +div{
   margin-top: 10px;
   font-size: 100%;
   color: #0e0b0b;
+  margin-left: 6%;
   /* color: #ff0000; */
 }
 
@@ -224,13 +359,13 @@ border: #0a0a0a;
   margin-top:3px;
 }
 
-article{
+/* article{
   /* padding-left: -8; */
-  margin-top: -2px;
+  /* margin-top: -2px;
   border: 1px solid rgb(218, 9, 9);
  
   
-} 
+}  */ 
 .jdw{
   text-align: center;
 
@@ -255,50 +390,65 @@ article{
   color: #020202;
 }
 
+.jdShopp{
+    width:85%;
+     margin-left: 8rem;
+     display: flex;
+     margin-top: 1%; 
+}
+
+/* .addTit{
+    width:85%;
+     margin-left: 8rem;
+     display: flex;
+     margin-top: 0.5%; 
+} */
+
+.jds{
+    font-size: larger;
+    color: grey;
+    margin-top: 3rem;
+    margin-left: 8rem;
+    text-decoration: none;
+}
+
 .flexContainer {
     display: flex;
     background-color: rgb(247, 247, 247);
     flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 10rem;
+    margin-top: 1rem;
     
   }
   
   .flexContainer > div {
     box-shadow: 0 4px 90px 0 rgba(0, 0, 0, 0.2);
     background-color: #feffff; 
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 45px;
+    /* margin-left: 1rem; */
+    padding: 20px 20px 5px 15px;
     font-size: 30px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
    
   }
-  .flexContainer > .isi {
-    background-color: #ffffff;
-    margin: 0rem 1rem 1rem 1rem;
-    padding: 45px;
-    font-size: 30px;
-    /* border:3px solid rgb(86, 1, 245); */
-  }
-  .flexContainer > .titlen {
-    box-shadow: 0 4px 90px 0 rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    margin: 1rem 1rem 0rem 1rem;
-    padding: 45px;
-    font-size: 30px;
-    /* border:3px solid rgb(250, 1, 1); */
-  }
-  he{
-    
-    color: rgb(0, 0, 0);
-    text-align: center;
-  }
+ 
+ 
+
   
 
 
   
 .gmbrD {
     /* border:2px solid rgb(7, 43, 248) ; */
-    width: 23vw;
+    width: 18vw;
 }
+.gmbrI 
+{
+    /* border:1px solid rgb(7, 43, 248) ;  */
+    width: 16vw;
+    /* margin-left: 6%; */
+}
+
 
 
 
@@ -334,10 +484,7 @@ div > b {
 
 }
 
-  article::first-letter {
-  color: #ff0000;
-  font-size: 150%;
-}  
+
 
 
 
