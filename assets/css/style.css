@@ -24,9 +24,7 @@
 }
 footer{
  
-  /* text-align: center; */
-  /* font-size: x-large;  */
-  background-color: rgb(0, 255, 0);
+ 
   padding-bottom: 5%;
   /* position: sticky; */
   bottom: 0;
@@ -62,9 +60,11 @@ footer a:active{
 }
 
 
+
+
 nav{
   display:flex;  /* diberi flex supaya menu navnya(ul) ada disamping logo/judul  */
-  background-color: rgb(161, 236, 47);
+  background-color:rgb(0, 255, 0);
   /* space betwen untuk memberi jarak ditengah-tengahnya */
   justify-content :space-around; /*untuk memberi jarak setiap sisinya   
   /* padding: 20px 0; untuk memberi jarak atas bawah(20px) kiri kanan(0) pada navbar */
@@ -76,10 +76,7 @@ nav{
   
 }
 
-nav.logo{
-  font-family: 'Montserrat', sans-serif;
-  font-size:large
-} 
+
 nav ul{
   
   display:flex;/* diberi flex supaya menu navnya jejer horizontal  */
@@ -90,7 +87,7 @@ nav ul{
 }
 nav ul li a{
   text-decoration: none;/*untuk menghilangkan underscore pada huruf di li*/
-  font-size :1em;/*untuk mengecilkan ukuran huruf */
+  font-size :x-large;/*untuk mengecilkan ukuran huruf */
 }
 
 .conH{
