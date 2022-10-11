@@ -1,4 +1,4 @@
-// const buy=[10,20,40,50,5,2];
+
 const discount1=20/100;
 const discount2=30/100;
 const discount3=50/100;
@@ -13,12 +13,9 @@ let detailBook=["",
 {bookName:"Naruto Shipudden Movie 2 ",authorName:"Musashi Kishimoto",rilis:"February 12 2022",price:35000},
 {bookName:"Naruto Movie 1 ",authorName:"Musashi Kishimoto",rilis:"February 12 2022",price:50000},
 {bookName:"Boruto ",authorName:"Musashi Kishimoto",rilis:"February 12 2022",price:55000}];
-//  const buy=["",11000,15000,20000,25000,30000,35000,50000,55000] ; 
-var resDis=["  "];
-var hasArr=["",
-"Amount of Discount: "
-,"Price after discount: ","Amount of tax:"
-, "Price after tax: "];
+ 
+var resDis=[""];
+var hasArr=["","Amount of Discount: ","Price after discount: ","Amount of tax:", "Price after tax: "];
 var space="       "
 // var v1=20;
 // var v2=30;
