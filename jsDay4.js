@@ -13,7 +13,7 @@ songList=[
     {artis:"Kendrick Lamar",albumSong:"Joker",nameSong:"DNA",genre:"RAP",rilis:"12 Februari 2022",timePlaying:2,priceSong:600000},
     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Alone",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Unity",genre:"EDM",rilis:"12 Desember 2022",timePlaying:10,priceSong:500000},
-    {artis:"Travis Scott",albumSong:"Astro World",nameSong:"Sicko Mode",genre:"RAP",rilis:"12 Februari 2010",timePlaying:4,priceSong:500000},
+    {artis:"Travis Scott",albumSong:"Astro World",nameSong:"Sicko Mode",genre:"RAP",rilis:"12 Februari 2010",timePlaying:50,priceSong:500000},
     {artis:"Alan Walker",albumSong:"Joker",nameSong:"One my way",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Darkside",genre:"EDM",rilis:"12 Februari 2015",timePlaying:16,priceSong:500000},
     {artis:"Taylor Swift",albumSong:"Joker",nameSong:"Red",genre:"POP",rilis:"12 Februari 2016",timePlaying:20,priceSong:500000},
@@ -25,24 +25,6 @@ let songL=[...songList];
 
 function songSheeran(songList)
 {
-    // songList=[
-    //     {artis:"Ed Sheeren",albumSong:"Joker",nameSong:"The Joker and The Queen",genre:"POP",rilis:"11 Maret 2021",timePlaying:7,priceSong:300000},
-    //     {artis:"Kendrick Lamar",albumSong:"Joker",nameSong:"DNA",genre:"RAP",rilis:"12 Februari 2022",timePlaying:2,priceSong:600000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Alone",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Unity",genre:"EDM",rilis:"12 Desember 2022",timePlaying:10,priceSong:500000},
-    //     {artis:"Travis Scott",albumSong:"Astro World",nameSong:"Sicko Mode",genre:"RAP",rilis:"12 Februari 2010",timePlaying:4,priceSong:500000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:16,priceSong:500000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:20,priceSong:500000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:30,priceSong:500000},
-    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:40,priceSong:500000},
-    
-    //     ];
-    // let songong=songList;
-    //  songL=[...songong];
-    //  da.push(songList);
-
-    // let { artis,albumSong,nameSong,rilis,timePlaying,priceSong}=songL;
     
         console.log(" Song List");
         for(let i=0;i<songL.length;i++)
@@ -62,7 +44,7 @@ function songSheeran(songList)
         // function checkAdult(artis) {
         //     return artis == "Ed Sheeren";
         //   }
-        let singer=songL.filter(nyanyi=>nyanyi.artis=="Ed Sheeren")
+        let singer=songL.filter(nyanyi=>nyanyi.artis=="Alan Walker")
         console.log("+------------------------------------------------+");
         console.log("| Artist:")
         console.log("+------------------------------------------------+");
@@ -96,7 +78,7 @@ function genreS(songL)
             "| Price Song:"+songL[i].priceSong);
         }
     // console.log("hasil: "+genreSong.length);
-    let tipe=songL.filter(ganra=>ganra.genre=="EDM")
+    let tipe=songL.filter(ganra=>ganra.genre=="POP")
     console.log("+------------------------------------------------+");
     console.log("| Genres:")
     console.log("+------------------------------------------------+");
@@ -123,7 +105,7 @@ function songLe(songL)
           "| Price Song:"+songL[i].priceSong);
       }
   // console.log("hasil: "+genreSong.length);
-  let less=songL.filter(ganraa=>ganraa.genre=="EDM")
+  let less=songL.filter(ganraa=>ganraa.genre=="RAP")
   
   console.log("+------------------------------------------------+");
   console.log("|  Playlist Genres:");
