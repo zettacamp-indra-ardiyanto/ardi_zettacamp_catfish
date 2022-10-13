@@ -1,34 +1,48 @@
-let songList;
+
 // let genreSong;
 let songLes;
-let songL;
+// let songL;
 let da=[];
 let sv=[];
 let tmbh;
 let stm=[];
 tmbh=0;
+let songList;
+songList=[
+    {artis:"Ed Sheeren",albumSong:"Joker",nameSong:"The Joker and The Queen",genre:"POP",rilis:"11 Maret 2021",timePlaying:7,priceSong:300000},
+    {artis:"Kendrick Lamar",albumSong:"Joker",nameSong:"DNA",genre:"RAP",rilis:"12 Februari 2022",timePlaying:2,priceSong:600000},
+    {artis:"Alan Walker",albumSong:"Joker",nameSong:"Alone",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
+    {artis:"Alan Walker",albumSong:"Joker",nameSong:"Unity",genre:"EDM",rilis:"12 Desember 2022",timePlaying:10,priceSong:500000},
+    {artis:"Travis Scott",albumSong:"Astro World",nameSong:"Sicko Mode",genre:"RAP",rilis:"12 Februari 2010",timePlaying:4,priceSong:500000},
+    {artis:"Alan Walker",albumSong:"Joker",nameSong:"One my way",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
+    {artis:"Alan Walker",albumSong:"Joker",nameSong:"Darkside",genre:"EDM",rilis:"12 Februari 2015",timePlaying:16,priceSong:500000},
+    {artis:"Taylor Swift",albumSong:"Joker",nameSong:"Red",genre:"POP",rilis:"12 Februari 2016",timePlaying:20,priceSong:500000},
+    {artis:"Taylor Swift",albumSong:"Joker",nameSong:"Belong me",genre:"POP",rilis:"12 Februari 2010",timePlaying:30,priceSong:500000},
+    {artis:"Logic",albumSong:"Joker",nameSong:"Soul food",genre:"RAP",rilis:"12 Februari 2016",timePlaying:40,priceSong:500000},
+
+    ];
+let songL=[...songList];
 
 function songSheeran(songList)
 {
-    songList=[
-        {artis:"Ed Sheeren",albumSong:"Joker",nameSong:"The Joker and The Queen",genre:"POP",rilis:"11 Maret 2021",timePlaying:7,priceSong:300000},
-        {artis:"Kendrick Lamar",albumSong:"Joker",nameSong:"DNA",genre:"RAP",rilis:"12 Februari 2022",timePlaying:2,priceSong:600000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Alone",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Unity",genre:"EDM",rilis:"12 Desember 2022",timePlaying:10,priceSong:500000},
-        {artis:"Travis Scott",albumSong:"Astro World",nameSong:"Sicko Mode",genre:"RAP",rilis:"12 Februari 2010",timePlaying:4,priceSong:500000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:16,priceSong:500000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:20,priceSong:500000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:30,priceSong:500000},
-        {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:40,priceSong:500000},
-
-        ];
-    // let titS=["Artis Name: "," Album Name: ","Release Date: ","Time Playing: ","PriceSong: "]
-     songL=[...songList];
-    //  da.push(songList);
+    // songList=[
+    //     {artis:"Ed Sheeren",albumSong:"Joker",nameSong:"The Joker and The Queen",genre:"POP",rilis:"11 Maret 2021",timePlaying:7,priceSong:300000},
+    //     {artis:"Kendrick Lamar",albumSong:"Joker",nameSong:"DNA",genre:"RAP",rilis:"12 Februari 2022",timePlaying:2,priceSong:600000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Alone",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Unity",genre:"EDM",rilis:"12 Desember 2022",timePlaying:10,priceSong:500000},
+    //     {artis:"Travis Scott",albumSong:"Astro World",nameSong:"Sicko Mode",genre:"RAP",rilis:"12 Februari 2010",timePlaying:4,priceSong:500000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:10,priceSong:500000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:16,priceSong:500000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:20,priceSong:500000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:30,priceSong:500000},
+    //     {artis:"Alan Walker",albumSong:"Joker",nameSong:"Perfect",genre:"EDM",rilis:"12 Februari 2010",timePlaying:40,priceSong:500000},
     
-        
-    let { artis,albumSong,nameSong,rilis,timePlaying,priceSong}=songL;
+    //     ];
+    // let songong=songList;
+    //  songL=[...songong];
+    //  da.push(songList);
+
+    // let { artis,albumSong,nameSong,rilis,timePlaying,priceSong}=songL;
     
         console.log(" Song List");
         for(let i=0;i<songL.length;i++)
@@ -118,7 +132,7 @@ function songLe(songL)
   let les=less;
     let kr;
     
-  console.log("length playlist: "+les.length);
+  console.log("Length playlist: "+les.length);
 //   console.log("time playing: "+less[].timePlaying);
     let hsl;
   for( let a=0;a<les.length;a++)
@@ -133,9 +147,9 @@ function songLe(songL)
   }
 
   stm.push(tmbh);
-
+  
+  console.log("Amount of Duration: "+sv);
   console.log("Time playing playlist: "+tmbh);
-  console.log("jumlah: "+sv);
 
     for (let c=0;c<stm.length;c++)
         {
