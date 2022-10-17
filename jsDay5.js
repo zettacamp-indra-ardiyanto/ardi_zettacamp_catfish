@@ -42,7 +42,7 @@ if (app.get('/'))
 app.use(checkAuthh);
 
 
-function bookPurchased()
+async function bookPurchased()
     {
         let stokTake=4;
         let termCredit=2;
@@ -173,12 +173,15 @@ function bookPurchased()
                                 
                     
                             stcrdt.push([{months: bln,term_of_condition_due: termCredit,price_term: cred}]);
+                            creditResult= await setTimeout((stcrdt),3000).toString();
+                            
+                                
     
                           
               return stcrdt;                          
     }
 
-app.listen(3000);
+app.listen(2000);
 
 
 
