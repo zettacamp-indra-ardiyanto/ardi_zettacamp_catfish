@@ -26,205 +26,164 @@ app.use((req,res,next)=>{
 
 app.use(checkAuth);
 
-const checkAuthh = (req, res, next)=>{
-  
-    console.log("hasilnyo: "+ bookPurchased())
-    res.send( bookPurchased());
+app.get('/',async (req, res) => {
+    res.send(res.send(await bookPurchased()))
+  })
 
 
-}
 
-app.use(checkAuthh);
+let stokTake=4;
+let termCredit=2;
+let st=0;  
 
+const discount1=20/100;
+const discount2=30/100;
+const tax=10/100;
+let cred=0;
+let bln="";
+let stcrdt=[];
+let jmBook;
+let taxH;
+let discountR;
+let hsl;
+let taxx="10%";
+let resDis=[];
+let price=800000;
 let additionalPrice=20/100;
-  let discountR;
-  let hsl;
-  const tax=10/100;
-  let taxH;
-  const discount1=20/100;
-  const discount2=30/100;
-  let latePrice=0;
-  let cred=0;
-  let cek=""; 
-  let stokTake=2;
-  let termCredit=[1,2,3,4,5,6,7,8,9,12];
-  let st=0;  
-  let resDis=[];
+let priceTerm=[];
 
-  let stcrdt=[];
-  let jmBook;
-  let priceTerm=[];
-  let creditResult;
-  let hasilUtang;
-  let detailBook={bookName:"Naruto ",authorName:"Musashi Kishimoto",rilis:"February 12 2022",price:2000000,stok:5};
-      
-async function bookPurchased()
+function bookPurchased()
     {
-        
-        let bln="";
-      
-        
-      
-        let taxx="10%";
-      
+   
+        let hasArr=["Total Price: ","Amount of purchased book: ","Amount of Discount: ","Price after discount: ","Amount of tax:", "Price after tax: "];
+     
 
-      
-        for(let x=0;x<termCredit.length;x++)
-        {
-            st=5-stokTake;
-            jmBook=stokTake*detailBook.price;
-                  
-            
-            if (st<1){
-                console.log("Sorry bro!, we are out of stock , come again tomorrow");
-                break;
-            }
-            else if(  jmBook>= 500000 &&   jmBook<=1900000)
-                {
-                   
-                        cek=" 20%";
-                        discountR=discount1*  jmBook;
-                        hsl=  jmBook-discountR;
-                        taxH=hsl-tax;
-                        asyncronous1(taxH,cred,termCredit);
-                        // cred=taxH/termCredit[x];
-                        latePrice=priceTerm[0]+additionalPrice;
-                        // taxTotal.push(latePrice);
-                  
-                }
-                else if(  jmBook>= 2000000 &&   jmBook<=25000000)
-                {
-                    cek=" 30%";
+        st=5-stokTake;
+        jmBook=stokTake*price;
+              
+        resDis.push( jmBook);
+
+                        for(let x=0;x<hasArr.length;x++)
+                        {
+                            if (st<1){
+                                console.log("Sorry bro!, we are out of stock , come again tomorrow");
+                                break;
+                            }
+                            else if(  jmBook>= 500000 &&   jmBook<=1900000)
+                                {
+                                    cek=" 20%";
+                                    
+                                    discountR=discount1*  jmBook;
+                                    hsl=  jmBook-discountR;
+                                    taxH=hsl-tax;
+                                    resultH=hsl;
+                                    latePrice= asyncronous1(taxH,cred,termCredit)+additionalPrice;
+                         
+                                }
+                                
+                                else if(  jmBook>= 2000000 &&   jmBook<=25000000)
+                                {
+                                    cek=" 30%";
+                                    discountR=discount2*  jmBook;
+                                    hsl=  jmBook-discountR;
+                                    taxH=hsl-tax;
+                                    resultH=hsl;
+                                    latePrice= asyncronous2(taxH,cred,termCredit)+additionalPrice;
+                                      }
+                                else{
+                                    console.log("sorry bro!, nothing discount for you currently");
+                                }                        
+                        }   
                     
-                    discountR=discount2*  jmBook;
-                    hsl=  jmBook-discountR;
-                    taxH=hsl-tax;
-                    resultH=hsl;
-                    // cred=taxH/termCredit[x];
-                    asyncronous2(taxH,cred,termCredit);
-                    latePrice=priceTerm[0]+additionalPrice;
+                        
+                                if (termCredit==2)
+                                {
+                                    bln="January,February ";
+                                    
+                                    
+                                }
+                                else if (termCredit==1)
+                                {
+                                    bln="January ";
+                                
+                                }
+                            
+                                else if (termCredit==3)
+                                {
+                                    bln="January,February,March ";
+                                
+                                }
+                                else if (termCredit==4)
+                                {
+                                    bln="January,February,March,May ";
+                                
+                                }
+                                else if (termCredit==5)
+                                {
+                                    bln="January,February,March,May,June ";
+                                
+                                }
+                                else if (termCredit==6)
+                                {
+                                    bln="January,February,March,May,June,July ";
+                                
+                                }
+                                else if (termCredit==7)
+                                {
+                                    bln="January,February,March,May,June,July,August ";
+                                
+                                }
+                                else if (termCredit==8)
+                                {
+                                    bln="January,February,March,May,June,July,August,September ";
+                                
+                                }
+                                else if (termCredit==9)
+                                {
+                                    bln="January,February,March,May,June,July,August,September,October ";
+                                
+                                }
+                                else if (termCredit==12)
+                                {
+                                    bln="January,February,March,May,June,July,August,September,October,November,Desember ";
+                                
+                                }
+    
+    
+                                else{
+                                    console.log("data not avalaible");
+                                }
+                 
+                              
+                        
                     
-                }
-               
-                else{
-                    console.log("sorry bro!, nothing discount for you currently");
-                }      
+                            stcrdt.push({months: bln,term_of_condition_due: termCredit,price_term: priceTerm[0],tax_admin:additionalPrice,tax_total: latePrice});
+                         
+                            setTimeout(function() { stcrdt; },100000);
 
-                
-                if (termCredit[x]==2)
-                {
-                    bln="January,February ";
-                    
-                    
-                }
-                else if (termCredit[x]==1)
-                {
-                    bln="January ";
-                
-                }
-            
-                else if (termCredit[x]==3)
-                {
-                    bln="January,February,March ";
-                
-                }
-                else if (termCredit[x]==4)
-                {
-                    bln="January,February,March,May ";
-                
-                }
-                else if (termCredit[x]==5)
-                {
-                    bln="January,February,March,May,June ";
-                
-                }
-                else if (termCredit[x]==6)
-                {
-                    bln="January,February,March,May,June,July ";
-                
-                }
-                else if (termCredit[x]==7)
-                {
-                    bln="January,February,March,May,June,July,August ";
-                
-                }
-                else if (termCredit[x]==8)
-                {
-                    bln="January,February,March,May,June,July,August,September ";
-                
-                }
-                else if (termCredit[x]==9)
-                {
-                    bln="January,February,March,May,June,July,August,September,October ";
-                
-                }
-                else if (termCredit[x]==12)
-                {
-                    bln="January,February,March,May,June,July,August,September,October,November,Desember ";
-                
-                }
-                else{
-                    console.log("data not avalaible");
-                }
-                // stcrdt.push({term_of_condition_due: termCredit[x],months: bln,price_term: priceTerm[x],tax_admin:additionalPrice,tax_total: latePrice});
-                // creditResult= new Promise(
-                //     function(resolve){
-                //        setTimeout(function(){resolve(stcrdt);},3000).toString();
-                
-                //     });
-
-        }
-        stcrdt.push({term_of_condition_due: termCredit[x],months: bln,price_term: priceTerm[x],tax_admin:additionalPrice,tax_total: latePrice});
-        creditResult= new Promise(
-            function(resolve){
-               setTimeout(function(){resolve(stcrdt);},3000).toString();
-        
-            });
-
-            
-        creditResult= new Promise(
-            function(resolve){
-               setTimeout(function(){resolve(stcrdt);},3000).toString();
-        
-            });
-
-        resDis.push( {stock_currently_available: st,total_price:jmBook,amoun_of_purcased_book:stokTake,amount_of_discount:cek,price_after_discount:hsl,amount_of_tax:taxx,price_after_tax:taxH});
-        console.log (detailBook);
-        let titleDay3=[...resDis];
-        console.log('\n');
-        console.log (resDis);
-        console.log('\n');
-        hasilUtang= await creditResult;
-        console.log(hasilUtang);
-    //    console.log('\n')
+                       
                           
-              return hasilUtang;                          
+                    return stcrdt;                          
     }
-    // console.log(stcrdt);
 
- // second function
- function asyncronous1(taxH,cred,termCredit){
-    for (let i=0;i<termCredit.length;i++){
-        cred=taxH/termCredit[i];
-       
-    }
-    priceTerm.push(cred);
-   return priceTerm;
-}
+ 
 
-function asyncronous2(taxH,cred,termCredit){
-    for (let i=0;i<termCredit.length;i++){
-        cred=taxH/termCredit[i];
-        
-    }
-    priceTerm.push(cred);
-   return priceTerm;
-}
+    function asyncronous1(taxH,cred,termCredit){
+    
+        cred=taxH/termCredit;
+        priceTerm.push(cred);
+        return cred;
+        }
+ 
+    function asyncronous2(taxH,cred,termCredit){
+      
+        cred=taxH/termCredit;
+        priceTerm.push(cred);
+        return cred; 
+        }
 
+app.listen(5000);
 
-app.listen(3000);
-
-bookPurchased()   ;
 
 
 
@@ -234,6 +193,5 @@ bookPurchased()   ;
 
 
 
-// module.exports= bookPurchased;
         
 
