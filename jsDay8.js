@@ -62,11 +62,7 @@ detailBook.add({bookName:"Narto ",authorName:"Musashi Kishimoto",rilis:"February
 detailBook.add({bookName:"One Piece ",authorName:"Musashi Kishimoto",rilis:"February 12 2022",stok:5});
 console.log(detailBook);
 detailBook.delete('Naruto')
-if (detailBook.has='uto0'){
-    console.log('you have findit');
-}else {
-    console.log('try again');
-}
+
 
 const fruits = new Map([
     ["Harry Potter", 500],
@@ -74,7 +70,7 @@ const fruits = new Map([
     ["Great man", 200]
   ]);
 
-//   console.log(fruits);
+
 
 
 
