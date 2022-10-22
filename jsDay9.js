@@ -18,8 +18,6 @@ function kodeToken()
 
 };
 
-
-
 function authentakasi(req,res,next){
 let savetoken=req.headers.authorization.split(' ')[1];
   
@@ -28,9 +26,6 @@ next ();
 
 }
 
-
-
-~
 app.get('/login', (req, res) => {
  
   const tokenn = kodeToken();
@@ -58,17 +53,16 @@ app.get('/songList' ,(req, res) => {
   });
 
   app.get('/playlist', (req, res) => {
-    console.log('tambah: ',tmbh);
+    
   
     res.send(songLe(songL));
   })
-let songLes;
 
-let da=[];
-let sv=[];
-let tmbh;
-let stm=[];
+let arrayKali=[];
+let tmbhUnder=0;
+
 tmbh=0;
+let minutesLess=10;
 let songList;
 songList=[
     {artis:"Ed Sheeren",albumSong:"Joker",nameSong:"The Joker and The Queen",genre:"POP",rilis:"11 Maret 2021",timePlaying:7,priceSong:300000},
@@ -112,53 +106,34 @@ function genreS(songL)
 
 
 
-
 function songLe(songL)
 {
-   
-  let less=songL.filter(ganraa=>ganraa.genre=="EDM")
-  
-  console.log("+------------------------------------------------+");
-  console.log("|  Playlist Genres:");
-  console.log("+------------------------------------------------+");
-  console.log(less);
+
+    console.log ('display under ...minutes');
+
+
+    let kaliUnder;
+    let minFilter= songL.filter(timesFilter=>timesFilter.timePlaying<minutesLess);
+    for( let z=0;z<minFilter.length;z++)
+  {
+    kaliUnder=60*minFilter[z].timePlaying;
+    arrayKali.push(kaliUnder);
+    
+  }
+  for (let y=0;y<arrayKali.length;y++)
+  {
+    tmbhUnder+=arrayKali[y];
+  }
  
-    let kr;
-    
-  console.log("Length playlist: "+less.length);
+    console.log('times under:',minFilter);
+    let spreadUnder=[...minFilter, {time_total: tmbhUnder }]
 
-    let hsl;
-  for( let a=0;a<less.length;a++)
-  {
-    kr=60*less[a].timePlaying;
-    sv.push(kr);
-    
-  }
-  for (let b=0;b<sv.length;b++)
-  {
-    tmbh+=sv[b];
-  }
-
-  stm.push(tmbh);
-  
-  console.log("Amount of Duration: "+sv);
-  console.log("Time playing playlist: "+tmbh);
-
-    for (let c=0;c<stm.length;c++)
-        {
-            if (tmbh<3600)
-            {
-                console.log ("This playlist song is less then 1 hours ");
-            }
-            else 
-            {
-                console.log("Sorry bro!, your playlist more then 1 hours");
-              break;
-            }
-        }
         
-    return stm;
+    return spreadUnder;
 }
+
+songLe(songL);
+
 
 
 app.listen(6000);
