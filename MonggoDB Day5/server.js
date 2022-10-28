@@ -8,6 +8,57 @@ app.listen(8000);
 ////////bookshelfs//////////////////
 
 
+// find readbymatch
+const { readBookbymatch } = require('./dbHelpers')
+app.get('/readbymatch', async (req, res) => {
+
+  const books = await readBookbymatch ()
+  if (books.error) {
+    res.status(500).json({
+      message: error.message,
+      books: books.data
+    })
+  }
+  res.status(200).json({
+      message: 'success',
+      books: books.data
+    }) 
+})
+
+// addfield query agregate
+const { addFieldsAgregate} = require('./dbHelpers')
+app.get('/addfields', async (req, res) => {
+
+  const books = await addFieldsAgregate ()
+  if (books.error) {
+    res.status(500).json({
+      message: error.message,
+      books: books.data
+    })
+  }
+  res.status(200).json({
+      message: 'success',
+      books: books.data
+    }) 
+})
+
+// addfield query agregate
+const { addUnwind} = require('./dbHelpers')
+app.get('/addunwind', async (req, res) => {
+
+  const books = await addUnwind ()
+  if (books.error) {
+    res.status(500).json({
+      message: error.message,
+      books: books.data
+    })
+  }
+  res.status(200).json({
+      message: 'success',
+      books: books.data
+    }) 
+})
+
 
 
 // creat book task4
