@@ -1,0 +1,29 @@
+{
+  "name": "mongodb_day8",
+  "version": "1.0.0",
+  "description": "mongodb_day8",
+  "main": "server.js",
+  "scripts": {
+    "test": "console.log('try')",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish.git#MonggoDB_Day8"
+  },
+  "keywords": [
+    "mongodb"
+  ],
+  "author": "ardy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish/issues"
+  },
+  "homepage": "https://github.com/zettacamp-indra-ardiyanto/ardi_zettacamp_catfish/tree/MonggoDB_Day8#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "global": "^4.4.0",
+    "mongoose": "^6.7.0",
+    "mongose": "^0.0.2-security"
+  }
+}
