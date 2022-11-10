@@ -1,6 +1,6 @@
 const {ApolloServer,gpl} = require('apollo-server');
 
-const typeDefs= `#graphql
+const restaurantTypeDefs= `#graphql
 enum status{
     active
     deleted
@@ -104,6 +104,10 @@ type page_user{
   userFind: users
  
 }
+
+type createUser{
+  createId=users
+}
   type Query {
     userPage(email:String):page_user
     books: [Book]
@@ -159,5 +163,6 @@ type page_user{
 
 `;
 
-module.exports = {typeDefs};
+module.exports = {restaurantTypeDefs};
+
 

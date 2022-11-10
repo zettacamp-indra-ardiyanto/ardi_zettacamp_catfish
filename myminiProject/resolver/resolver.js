@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const DataLoader = require('dataloader');
 const {ModelBook,BookSheft,modelSchemaFinalTaskMongodb,modelSchemaSongs} = require('../bookSchema')
-const {modelUserSchema} = require('../model/userModel.js')
+
 
 let resultSong;
 let songMap={};
@@ -41,25 +41,11 @@ const getPlaylistLoader=async (parent,{object_id})=>
   }
 }
 
-const resolvers = {
+const restaurantResolvers = {
   
     Query: {
         
-      userPage: async (parent,{email}) => {
-        try{
-          const AgregatPlaylists= await modelUserSchema.aggregate([
-            {
-      
-              $match:{email: email}
-            }
-          ])
-          console.log(AgregatPlaylists);
-          if (!AgregatPlaylists) throw new Error('Book that you wish not found')
-          return {error: null, userFind:AgregatPlaylists}
-        }catch(error) {
-            return {error: error.message, userFind: null}
-        }
-      },
+     
       books: async()=>{
         try{
           const bookss = await modelSchemaFinalTaskMongodb.find({})
@@ -105,16 +91,10 @@ const resolvers = {
   
   
   Mutation:{
-    registrationInput: async (parent,{dataUser} )=>{
-      console.log(dataUser);
-      const newBook = new modelUserSchema(dataUser)
-      await newBook.save()
-      return newBook
-      
-    },
+
     addBook: async (parent,{data} )=>{
       console.log(data);
-      const newBook = new ModelBook(id,title,author,publisher,price)
+      const newBook = new ModelBook(data)
       await newBook.save()
       return newBook
       
@@ -213,4 +193,4 @@ const resolvers = {
 };
 
 
-module.exports = {resolvers};
+module.exports = {restaurantResolvers};
