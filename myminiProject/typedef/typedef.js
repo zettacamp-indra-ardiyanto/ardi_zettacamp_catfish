@@ -126,8 +126,8 @@ type createUser{
     author: String
     publisher:String
     price: Int
-
   }
+  
   input inputUser {
     first_name: String,
     last_name: String,

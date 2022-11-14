@@ -1,31 +1,35 @@
 const jwt = require('jsonwebtoken')
 const {ApolloServer , ApolloError} = require('apollo-server-express')
 const { GraphQLError } = require('graphql')
-// const { ApolloError } = require('apollo-server-express');
-// const fs = require('fs');
-// const path = require('path');
+const {modelUserSchema} = require('../model/userModel.js')
 
-// let private = fs.readFileSync(path.join(__dirname, '../,./private.key'))
-
-const userAuth = async (resolve, root, args, context, info) => {
-    let token = context.req.headers.authorization
+const userAuth = async (resolve, parent, args, context) => {
+    
     if (!context.req.headers.authorization) {
        throw new GraphQLError('please fill your account!')
     }
-    jwt.verify(token,'mykey',(err)=>{
-        if(err){
-            throw new GraphQLError(err)
-        }
+
+
+    let token = context.req.headers.authorization;
+    let decode=jwt.verify(token,'mykey')
+
+    const getUserData= await modelUserSchema.find({
+        email:decode.email
     });
-    return await resolve(parent,args,context,info);
+
+    context.user= getUserData;
+    context.token=token;
+    return await resolve(parent,args,context);
 }
 
 const middleWare = [{
     Query:{
-        userPages:userAuth,
-        userByID:userAuth
+        getAllUsers:userAuth,
+        GetOneUser:userAuth
     },
     Mutation: {
+        deleteUser:userAuth,
+        UpdateUser:userAuth
         // registrationInput: userAuth
     }
 }]

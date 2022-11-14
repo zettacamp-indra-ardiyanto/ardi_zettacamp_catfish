@@ -14,16 +14,18 @@ const {middleWare} = require('./middleware/authmiddlleware');
 // const middlewareAuth= [authMiddleware]
 
 //typedef import
-const { restaurantTypeDefs } = require("./typedef/typedef.js");
-const userTypeDefs = require('./typedef/typedefUser')
+const userTypeDefs = require('./typedef/typedefUser');
+const ingredientsTypeDefs = require('./typedef/typedefIngredients');
+const  receiptsTypeDefs  = require("./typedef/typedefReceipts");
 
 //resolver import
-const { restaurantResolvers } = require("./resolver/resolver.js");
+// const { restaurantResolvers } = require("./resolver/resolver.js");
 const userResolvers = require('./resolver/resolversUsers');
-
+const ingredientsResolvers = require('./resolver/resoversIngredients');
+const receiptsResolvers = require('./resolver/resolversReceipt');
 // mergering 
-typeDefs = mergeTypeDefs([userTypeDefs])
-resolvers = mergeResolvers([userResolvers])
+typeDefs = mergeTypeDefs([userTypeDefs,ingredientsTypeDefs,receiptsTypeDefs])
+resolvers = mergeResolvers([userResolvers,ingredientsResolvers,receiptsResolvers])
 
 //apollo schema
 const schema = makeExecutableSchema({
