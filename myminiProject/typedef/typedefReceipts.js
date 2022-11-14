@@ -23,6 +23,10 @@ type readAllReceipts{
   status: status
 }
 
+type deleteReceipes{
+  receipeData:readAllReceipts
+}
+
 input loaderReceipt{
   ingredient_id: ID
   stock_used: Int
@@ -49,11 +53,13 @@ type Mutation {
 
   UpdateReceipe(
     id:ID,
-    receipt_name: String
-   
-
+    receipt_name: String,
+    data: [loaderReceipt]
   ):readAllReceipts
-
+  
+  DeleteReceipe(
+    id:ID
+  ):deleteReceipes
 }
 
 `;

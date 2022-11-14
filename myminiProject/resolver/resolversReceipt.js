@@ -89,25 +89,38 @@ const receiptsResolvers = {
       
     },
 
-    UpdateReceipe:async (parent,{id,receipt_name,data,stock_used})=>{
+    UpdateReceipe:async (parent,{id,receipt_name,data, stock_used},context) => {
       try{
-        console.log(receipt_name);
-        const updateDataReceipes= new modelReceiptsSchema.findByIdAndUpdate(
+        console.log("id:",id);
+        // const status;
+        
+         let updateReceipesData = await modelReceiptsSchema.findByIdAndUpdate(
           id,
           {
-            receipt_name: receipt_name,
-            ingredients:data,
+            receipt_name:receipt_name,
+            ingredients: data,
             stock_used: stock_used
           },
           {new: true})
-          console.log("update data:",updateDataReceipes);
-          return updateDataReceipes;
-
+          console.log('update:',updateReceipesData);
+        if (!updateReceipesData) {
+          throw new GraphQLError('Failed to update receipe data')
+        }
+        return updateReceipesData
       }catch (error) {
-          return { error: error.message}
-          }
+      return { error: error.message}
+      }
     },
- 
+
+    DeleteReceipe:async (parent,{id}) => {
+      try{
+        const DeleteReceipes = await modelReceiptsSchema.findByIdAndDelete(id,{new: true})
+        if (!DeleteReceipes) throw new Error('Failed to delete receipes')
+        return { error: null,receipeData:DeleteReceipes}
+      }catch (error) {
+      return { error: error.message}
+      }
+    },
      
   } ,
   // BookSheft:{
